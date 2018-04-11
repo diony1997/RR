@@ -10,17 +10,18 @@ public class RoundRobin
     Escalonador t1000 = new Escalonador(quantum);    
 
     String nome = "Nome 1";
-    int tamanho = 10;
+    int tamanho = 4;
     int chegada = 0;
-    char io ='n';
-    if(io=='s')
-    {
-        int entradas[] = {0,2};
-        t1000.adicionar(new Processo(nome,tamanho,chegada,entradas));
-    }
-    t1000.adicionar(new Processo(nome,tamanho,chegada));
-    
-    
+    int[] n = {1};
+//    char io ='n';
+//    if(io=='s')
+//    {
+//        int entradas[] = {0,2};
+//        t1000.adicionar(new Processo(nome,tamanho,chegada,entradas));
+//    }
+    t1000.adicionar(new Processo(nome,tamanho,chegada,n));
+    t1000.adicionar(new Processo("nome2",2,1));
+        System.out.println(t1000.imprimir());
     
     
     }

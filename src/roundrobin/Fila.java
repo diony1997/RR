@@ -31,8 +31,17 @@ public class Fila
         tamanho++;
     }
     
+    public No peekPrimeiro()
+    {
+        return primeiro;
+    }
+    
     public Processo dequeue()
     {
+        if(isEmpty())
+        {
+            return null;
+        }
         Processo p1 = primeiro.getP();
         if(primeiro == ultimo)
         {
@@ -50,10 +59,14 @@ public class Fila
     {
         String saida = "";
         No atual = primeiro;
-        while(atual.getProximo()!=null)
+        while(atual!=null)
         {
-            saida+=atual.toString();
+            saida+=atual.getP().toString();
             atual=atual.getProximo();
+        }
+        if(saida.equals(""))
+        {
+            return "Fila Vazia";
         }
         return saida;
     }

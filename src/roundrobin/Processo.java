@@ -5,6 +5,7 @@ public class Processo
 {
     
     private int tamanho;
+    private int marcadorIO;
     private String nome;
     private int chegada;
     private int[] io;
@@ -15,6 +16,7 @@ public class Processo
         this.tamanho = tamanho;
         this.nome = nome;
         this.chegada = chegada;
+        io = null;
     }
     
      public Processo(String nome,int tamanho,int chegada,int[] io)
@@ -27,12 +29,13 @@ public class Processo
     
     public boolean isFinished()
     {
-        return (tamanho<=0);
+        return (tamanho==0);
     }
     
     public void procesar()
     {
         tamanho--;
+        marcadorIO++;
     }
     
     public String getNome()
@@ -67,15 +70,18 @@ public class Processo
     
     public boolean hasIo()
     {
-        for (int i = 0; i < io.length; i++) {
-            if(io[i]!=0)
-            {
-                return true;
+        if(io!=null)
+        {
+            for (int i = 0; i < io.length; i++) {
+                if(io[i]==marcadorIO)
+                {
+                    return true;
+                }
             }
+            return false;
         }
         return false;
     }
-    
     public void setSaida(int saida)
     {
         this.saida = saida;
