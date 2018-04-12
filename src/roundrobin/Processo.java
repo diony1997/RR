@@ -72,7 +72,8 @@ public class Processo
     {
         if(io!=null)
         {
-            for (int i = 0; i < io.length; i++) {
+            for (int i = 0; i < io.length; i++) 
+            {
                 if(io[i]==marcadorIO)
                 {
                     return true;
@@ -88,7 +89,8 @@ public class Processo
     }
 
     @Override
-    public String toString(){
+    public String toString()
+    {
         return nome+"("+tamanho+")  ";
     }
 }

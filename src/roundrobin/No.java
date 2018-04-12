@@ -16,15 +16,18 @@ public class No
         this.p=p;
         this.proximo=proximo;
     }
-    public void setProximo(No proximo) {
+    public void setProximo(No proximo) 
+    {
         this.proximo = proximo;
     }
 
-    public No getProximo() {
+    public No getProximo() 
+    {
         return proximo;
     }
 
-    public Processo getP() {
+    public Processo getP() 
+    {
         return p;
     }
     
