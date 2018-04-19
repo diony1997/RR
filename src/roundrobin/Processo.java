@@ -8,12 +8,13 @@ public class Processo
     private int marcadorIO;
     private String nome;
     private int chegada;
+    private int duracao;
     private int[] io;
     private int saida;
     
     public Processo(String nome,int tamanho,int chegada)
     {
-        this.tamanho = tamanho;
+        duracao = this.tamanho = tamanho;
         this.nome = nome;
         this.chegada = chegada;
         io = null;
@@ -21,7 +22,7 @@ public class Processo
     
      public Processo(String nome,int tamanho,int chegada,int[] io)
     {
-        this.tamanho = tamanho;
+        duracao = this.tamanho = tamanho;
         this.nome = nome;
         this.chegada = chegada;
         this.io = io;
@@ -86,6 +87,11 @@ public class Processo
     public void setSaida(int saida)
     {
         this.saida = saida;
+    }
+    
+    public int getDuracao()
+    {
+        return duracao;
     }
 
     @Override

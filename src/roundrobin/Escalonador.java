@@ -51,7 +51,6 @@ public class Escalonador
                 fila = "\nFila: " + filaSecundaria.showFila();
                 cpu = "\nCPU: " + atual.toString();
                 atual.procesar();
-//                System.out.println("Processou");
                 //Confere se ha io,se tiver acrescenta o processo de volta a fila
                 if (atual.hasIo()) 
                 {
@@ -71,6 +70,9 @@ public class Escalonador
                     terminio = " Fim do " + atual.getNome();
                     saida += tempo + chegada + fila + cpu + "\n\n";
                     contador++;
+                    marcarFim(atual,contador);
+
+                    
                     //Se acabou tudo imprimi os ultimos dados
                     if (filaSecundaria.isEmpty()) 
                     {
@@ -104,12 +106,63 @@ public class Escalonador
         return saida;
     }
 
+    public void marcarFim(Processo p, int contador)
+    {
+        No atual = filaPrincipal.peekPrimeiro();
+        while(atual.getP()!=p)
+        {
+            atual = atual.getProximo();
+        }
+        atual.getP().setSaida(contador);
+    }
+    
+    public String imprimirTabela()
+    {
+        String saida="",nome,io="";
+        int duracao,chegada,tempoEspera,turnAround;
+        double mediaEspera = 0, mediaTurn = 0;
+        No atual = filaPrincipal.peekPrimeiro();
+        while(atual!=null)
+        {
+            io = "";
+           nome = atual.getP().getNome();
+           duracao = atual.getP().getDuracao();
+           chegada = atual.getP().getChegada();
+           if(atual.getP().getIo()!=null)
+           {
+               int inOut[] = atual.getP().getIo();
+               for (int i = 0; i < inOut.length; i++)
+               {
+                   io+=inOut[i];
+                   if(i < inOut.length-1)
+                   {
+                       io+=",";
+                   }
+               }
+           } else
+           {
+               io = "  -  ";
+           }
+            
+            turnAround = atual.getP().getSaida()-atual.getP().getChegada();
+            tempoEspera = turnAround - atual.getP().getDuracao();
+            mediaEspera+= tempoEspera;
+            mediaTurn+=turnAround;
+            saida+=nome+"   |   "+duracao+"   |   "+chegada+"   |   "+io+"   |   "+tempoEspera+"   |   "+turnAround+"\n";
+            atual = atual.getProximo();
+        }
+        mediaTurn = mediaTurn/filaPrincipal.getTamanho();
+        mediaEspera = mediaEspera/filaPrincipal.getTamanho();
+        saida +="Media de Espera: "+mediaEspera+"\nMedia de Turn Around: "+mediaTurn;
+        return saida;
+    }
+    public int getQuantum(){
+        return quantum;
+    }
     public String imprimir() 
     {
-        String saida = "*************************************** \n"
-                + "******* Escalonador Round-Robin ******* \n"
-                + "*************************************** \n\n";
-        saida += executar() + "FIM";
+        String saida = "\"******* Inicio ******* \n\n";
+        saida += executar() + "******* FIM *******";
         return saida;
     }
 }
