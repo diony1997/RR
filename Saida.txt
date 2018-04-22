@@ -1,0 +1,62 @@
+"******* Inicio ******* 
+
+Tempo: 0 Chegada do P1
+Fila: Fila Vazia
+CPU: P1(8)  
+
+Tempo: 1
+Fila: Fila Vazia
+CPU: P1(7)  
+
+Tempo: 2
+Fila: Fila Vazia
+CPU: P1(6)  
+
+Tempo: 3 Chegada do P2
+Fila: P2(6)  
+CPU: P1(5)  
+
+Tempo: 4
+Fila: P1(4)  
+CPU: P2(6)  
+
+ Tempo: 5
+Fila: P1(4)  
+CPU: P2(5)  
+
+Tempo: 6  Operação de I/O P2
+Fila: P2(4)  
+CPU: P1(4)  
+
+Tempo: 7
+Fila: P2(4)  
+CPU: P1(3)  
+
+Tempo: 8
+Fila: P2(4)  
+CPU: P1(2)  
+
+ Tempo: 9
+Fila: P2(4)  
+CPU: P1(1)  
+
+Tempo: 10 Fim do P1
+Fila: Fila Vazia
+CPU: P2(4)  
+
+Tempo: 11  Operação de I/O P2
+Fila: Fila Vazia
+CPU: P2(3)  
+
+Tempo: 12
+Fila: Fila Vazia
+CPU: P2(2)  
+
+ Tempo: 13
+Fila: Fila Vazia
+CPU: P2(1)  
+
+ Tempo: 14 Fim do P2
+Fila: Fila Vazia
+
+******* FIM *******
