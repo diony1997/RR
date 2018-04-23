@@ -74,13 +74,16 @@ public class Escalonador {
                 }
                 tempo = "Tempo: " + contador;
                 //ifs para dizer se houve io ou se terminou o processo passado
+                if(!terminio.equals("") && !io.equals("")){
+                    tempo = "Tempo: " + contador + terminio + io;
+                    io = terminio = "";
+                }
                 
-                if (!terminio.equals("")) {
-                    System.out.println("fim"+contador);
+                else if (!terminio.equals("")) {
                     tempo = "Tempo: " + contador + terminio;
                     terminio = "";
                 }
-                if (!io.equals("")) {
+                else if (!io.equals("")) {
                     tempo = "Tempo: " + contador + io;
                     io = "";
                 }

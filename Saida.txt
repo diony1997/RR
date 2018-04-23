@@ -2,61 +2,233 @@
 
 Tempo: 0 Chegada do P1
 Fila: Fila Vazia
-CPU: P1(8)  
+CPU: P1(12)  
 
-Tempo: 1
-Fila: Fila Vazia
-CPU: P1(7)  
+Tempo: 1 Chegada do p0
+Fila: p0(8)  
+CPU: P1(11)  
 
 Tempo: 2
-Fila: Fila Vazia
-CPU: P1(6)  
+Fila: p0(8)  
+CPU: P1(10)  
 
 Tempo: 3 Chegada do P2
-Fila: P2(6)  
-CPU: P1(5)  
+Fila: p0(8)  P2(16)  
+CPU: P1(9)  
 
-Tempo: 4
-Fila: P1(4)  
-CPU: P2(6)  
+Tempo: 4 Chegada do P3
+Fila: p0(8)  P2(16)  P3(6)  
+CPU: P1(8)  
 
- Tempo: 5
-Fila: P1(4)  
-CPU: P2(5)  
+Tempo: 5 Chegada do p8
+Fila: P2(16)  P3(6)  P1(7)  p8(10)  
+CPU: p0(8)  
 
-Tempo: 6  Operação de I/O P2
-Fila: P2(4)  
-CPU: P1(4)  
+Tempo: 6
+Fila: P2(16)  P3(6)  P1(7)  p8(10)  
+CPU: p0(7)  
 
-Tempo: 7
-Fila: P2(4)  
-CPU: P1(3)  
+Tempo: 7 Chegada do P4
+Fila: P2(16)  P3(6)  P1(7)  p8(10)  P4(5)  
+CPU: p0(6)  
 
 Tempo: 8
-Fila: P2(4)  
+Fila: P2(16)  P3(6)  P1(7)  p8(10)  P4(5)  
+CPU: p0(5)  
+
+Tempo: 9
+Fila: P2(16)  P3(6)  P1(7)  p8(10)  P4(5)  
+CPU: p0(4)  
+
+Tempo: 10
+Fila: P3(6)  P1(7)  p8(10)  P4(5)  p0(3)  
+CPU: P2(16)  
+
+ Tempo: 11
+Fila: P3(6)  P1(7)  p8(10)  P4(5)  p0(3)  
+CPU: P2(15)  
+
+Tempo: 12  Operação de I/O P2
+Fila: P1(7)  p8(10)  P4(5)  p0(3)  P2(14)  
+CPU: P3(6)  
+
+Tempo: 13
+Fila: P1(7)  p8(10)  P4(5)  p0(3)  P2(14)  
+CPU: P3(5)  
+
+Tempo: 14
+Fila: P1(7)  p8(10)  P4(5)  p0(3)  P2(14)  
+CPU: P3(4)  
+
+Tempo: 15
+Fila: P1(7)  p8(10)  P4(5)  p0(3)  P2(14)  
+CPU: P3(3)  
+
+Tempo: 16
+Fila: P1(7)  p8(10)  P4(5)  p0(3)  P2(14)  
+CPU: P3(2)  
+
+Tempo: 17
+Fila: p8(10)  P4(5)  p0(3)  P2(14)  P3(1)  
+CPU: P1(7)  
+
+Tempo: 18
+Fila: p8(10)  P4(5)  p0(3)  P2(14)  P3(1)  
+CPU: P1(6)  
+
+Tempo: 19
+Fila: p8(10)  P4(5)  p0(3)  P2(14)  P3(1)  
+CPU: P1(5)  
+
+Tempo: 20
+Fila: p8(10)  P4(5)  p0(3)  P2(14)  P3(1)  
+CPU: P1(4)  
+
+Tempo: 21
+Fila: p8(10)  P4(5)  p0(3)  P2(14)  P3(1)  
+CPU: P1(3)  
+
+Tempo: 22
+Fila: P4(5)  p0(3)  P2(14)  P3(1)  P1(2)  
+CPU: p8(10)  
+
+ Tempo: 23
+Fila: P4(5)  p0(3)  P2(14)  P3(1)  P1(2)  
+CPU: p8(9)  
+
+Tempo: 24  Operação de I/O p8
+Fila: p0(3)  P2(14)  P3(1)  P1(2)  p8(8)  
+CPU: P4(5)  
+
+Tempo: 25
+Fila: p0(3)  P2(14)  P3(1)  P1(2)  p8(8)  
+CPU: P4(4)  
+
+Tempo: 26
+Fila: p0(3)  P2(14)  P3(1)  P1(2)  p8(8)  
+CPU: P4(3)  
+
+ Tempo: 27
+Fila: p0(3)  P2(14)  P3(1)  P1(2)  p8(8)  
+CPU: P4(2)  
+
+Tempo: 28  Operação de I/O P4
+Fila: P2(14)  P3(1)  P1(2)  p8(8)  P4(1)  
+CPU: p0(3)  
+
+Tempo: 29
+Fila: P2(14)  P3(1)  P1(2)  p8(8)  P4(1)  
+CPU: p0(2)  
+
+ Tempo: 30
+Fila: P2(14)  P3(1)  P1(2)  p8(8)  P4(1)  
+CPU: p0(1)  
+
+Tempo: 31 Fim do p0
+Fila: P3(1)  P1(2)  p8(8)  P4(1)  
+CPU: P2(14)  
+
+ Tempo: 32
+Fila: P1(2)  p8(8)  P4(1)  P2(13)  
+CPU: P3(1)  
+
+Tempo: 33 Fim do P3  Operação de I/O P2
+Fila: p8(8)  P4(1)  P2(13)  
 CPU: P1(2)  
 
- Tempo: 9
-Fila: P2(4)  
+ Tempo: 34
+Fila: p8(8)  P4(1)  P2(13)  
 CPU: P1(1)  
 
-Tempo: 10 Fim do P1
+Tempo: 35 Fim do P1
+Fila: P4(1)  P2(13)  
+CPU: p8(8)  
+
+Tempo: 36
+Fila: P4(1)  P2(13)  
+CPU: p8(7)  
+
+ Tempo: 37
+Fila: P4(1)  P2(13)  
+CPU: p8(6)  
+
+ Tempo: 38
+Fila: P2(13)  p8(5)  
+CPU: P4(1)  
+
+Tempo: 39 Fim do P4  Operação de I/O p8
+Fila: p8(5)  
+CPU: P2(13)  
+
+Tempo: 40
+Fila: p8(5)  
+CPU: P2(12)  
+
+Tempo: 41
+Fila: p8(5)  
+CPU: P2(11)  
+
+Tempo: 42
+Fila: p8(5)  
+CPU: P2(10)  
+
+Tempo: 43
+Fila: p8(5)  
+CPU: P2(9)  
+
+Tempo: 44
+Fila: P2(8)  
+CPU: p8(5)  
+
+Tempo: 45
+Fila: P2(8)  
+CPU: p8(4)  
+
+Tempo: 46
+Fila: P2(8)  
+CPU: p8(3)  
+
+Tempo: 47
+Fila: P2(8)  
+CPU: p8(2)  
+
+ Tempo: 48
+Fila: P2(8)  
+CPU: p8(1)  
+
+Tempo: 49 Fim do p8
+Fila: Fila Vazia
+CPU: P2(8)  
+
+Tempo: 50
+Fila: Fila Vazia
+CPU: P2(7)  
+
+Tempo: 51
+Fila: Fila Vazia
+CPU: P2(6)  
+
+Tempo: 52
+Fila: Fila Vazia
+CPU: P2(5)  
+
+Tempo: 53
 Fila: Fila Vazia
 CPU: P2(4)  
 
-Tempo: 11  Operação de I/O P2
+Tempo: 54
 Fila: Fila Vazia
 CPU: P2(3)  
 
-Tempo: 12
+Tempo: 55
 Fila: Fila Vazia
 CPU: P2(2)  
 
- Tempo: 13
+ Tempo: 56
 Fila: Fila Vazia
 CPU: P2(1)  
 
- Tempo: 14 Fim do P2
+ Tempo: 57 Fim do P2
 Fila: Fila Vazia
 
 ******* FIM *******
